@@ -30,4 +30,33 @@
     <string name="employment">Employment: 22%</string>
     <string name="child_population">Child Population: 988</string>
 
+    <string-array name="Info_array">
+        <item id="literacy">Literacy</item>
+        <item id="women_literacy">Women Literacy<item>
+        <item id="sex_ratio">Sex Ratio</item>
+        <item id="population">Population</item>
+        <item id="employment">Employment</item>
+        <item id="child_population">Child Population</item>
+        <item id ="no_school" >Number of Schools</item>
+        <item id = "no_fair_price_shop">Number of Fair Price Shops</item>
+        <item id="no_girl_primary">Number of Primary Girls</item>
+        <item id="no_pregnant">Number of Pregnant Ladies</item>
+        <item id="no_special_disease">Number of Special Diseases</item>
+        <item id="no_bpl">Number of BPL families</item>
+        <item id="no_antyodaya">Number of Antodaya</item>
+        <item id="no_malnutrition_women">number of malnourished women</item>
+        <item id="no_malnourished_child">Number of malnourished children</item>
+        <item id="no_women_health_issues">Number of women with health issues</item>
+        <item id="percentage_depend_agriculture">Percentage dependent on agriculture</item>
+        <item id="percentage_minority">Percentage of minority</item>
+        <item id="no_percentage_women_health_issues">Number of Pregnant Women with health issues</item>
+        <item id="percentage_depend_other">Percentage of people dependent on other sources of income</item>
+        <item id="percentage_sc">Percerntage of SC</item>
+        <item id="percentage_sc">percentage of ST</item>
+        <item id="village">Village</item>
+        <item id="percentage_depend_service">Percentage dependent on Service Sector</item>
+        <item id="no_job_cards">Number of job card holders</item>
+        <item id="no_female_job_card">Number of female with job cards </item>
+    </string-array>
+
 </resources>
