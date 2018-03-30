@@ -13,5 +13,6 @@
     <string name="Login">Login</string>
     <string name="login_btn_text">Login</string>
     <string name="registr_btn_text">Register</string>
+    <string name="using_the_app_for_first_time_then_click_the_button_below">Using the app for first time? Then click the button below.</string>
 
 </resources>
