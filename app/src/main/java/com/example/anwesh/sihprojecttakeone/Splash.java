@@ -16,7 +16,7 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        prefLang = getApplicationContext().getSharedPreferences("Arpit Preferred Language" , MODE_PRIVATE);
+        prefLang = getApplicationContext().getSharedPreferences("Arpit Shared Preferences" , MODE_PRIVATE);
         intent = new Intent(this, LoginPage.class);
     }
 

@@ -95,6 +95,7 @@
             android:layout_margin="5dp"
             android:clickable="true"
             android:focusable="true"
+            android:onClick="login"
             android:textAlignment="center"
             app:cardBackgroundColor="@android:color/holo_orange_dark"
             app:cardCornerRadius="20dp"
