@@ -18,6 +18,9 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         prefLang = getApplicationContext().getSharedPreferences("Arpit Shared Preferences" , MODE_PRIVATE);
         intent = new Intent(this, LoginPage.class);
+
+    //TODO check last login
+
     }
 
     public void setLangEn(View view) {

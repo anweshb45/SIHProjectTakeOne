@@ -24,6 +24,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,6 +107,7 @@ public class LoginPage extends AppCompatActivity {
                                     Log.d("LoginPage", response.getString("resp"));
                                     SharedPreferences user = getApplicationContext().getSharedPreferences("Arpit Shared Preferences" , MODE_PRIVATE);
                                     user.edit().putString("user" , username);
+                                    user.edit().putLong("lastlogin" , new Date().getTime());
                                     user.edit().apply();
                                     Intent intent = new Intent(LoginPage.this , MainActivity.class);
                                     startActivity(intent);

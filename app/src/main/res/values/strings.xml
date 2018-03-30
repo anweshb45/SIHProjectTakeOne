@@ -18,5 +18,16 @@
     <string name="select_lang_hin">भाषा चुनिए</string>
     <string name="english">English</string>
     <string name="Hindi">हिंदी</string>
+    <string name="panchayat_finance">Panchayat Finance</string>
+    <string name="virtual_trainer">Virtual Trainer</string>
+    <string name="schemes">Schemes</string>
+    <string name="social_issues">Social Issues</string>
+    <string name="VillageName">Village: Kasap</string>
+    <string name="literacy_rate">Literacy Rate: 35%</string>
+    <string name="sex_ratio">Sex Ratio: 911</string>
+    <string name="population">Population: 4568</string>
+    <string name="woman_population">Woman Population: 1872</string>
+    <string name="employment">Employment: 22%</string>
+    <string name="child_population">Child Population: 988</string>
 
 </resources>
