@@ -14,5 +14,9 @@
     <string name="login_btn_text">Login</string>
     <string name="registr_btn_text">Register</string>
     <string name="using_the_app_for_first_time_then_click_the_button_below">Using the app for first time? Then click the button below.</string>
+    <string name="select_language">Select Language</string>
+    <string name="select_lang_hin">भाषा चुनिए</string>
+    <string name="english">English</string>
+    <string name="Hindi">हिंदी</string>
 
 </resources>

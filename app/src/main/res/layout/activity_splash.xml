@@ -10,20 +10,87 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:srcCompat="@mipmap/logo_square" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/logo_square" />
+            android:text="@string/select_language"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="0dp"
+            android:padding="8dp"
+            android:textColor="@color/login_page_text"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_lang_hin"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="8dp"
+            android:textColor="@color/login_page_text"/>
+
+        <Button
+            android:id="@+id/select_en"
+            android:layout_width="174dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:onClick="setLangEn"
+            android:padding="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/english"
+            android:textAlignment="center"
+            android:textColor="@color/login_page_text"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/select_hi"
+            android:layout_width="174dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:onClick="setLangHi"
+            android:padding="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/Hindi"
+            android:textAlignment="center"
+            android:textColor="@color/login_page_text"
+            android:textSize="25sp" />
+
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
