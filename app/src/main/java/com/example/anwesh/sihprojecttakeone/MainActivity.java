@@ -3,6 +3,7 @@ package com.example.anwesh.sihprojecttakeone;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +16,14 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -23,8 +31,20 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity
         implements OnMapReadyCallback , NavigationView.OnNavigationItemSelectedListener {
+
+    JSONObject village_info_json = new JSONObject();
+    Spinner spinner;
+    ArrayAdapter<CharSequence> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +75,54 @@ public class MainActivity extends AppCompatActivity
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        Spinner spinner = (Spinner) findViewById(R.id.info_spinner);
+        spinner = (Spinner) findViewById(R.id.info_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        adapter = ArrayAdapter.createFromResource(this,
                 R.array.Info_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new SpinnerActivity());
+
+
+
+
+        String village_info_URL = "http://192.168.43.194:8086/village_data/kasap";
+
+        JsonArrayRequest villageInfoReq = new JsonArrayRequest(Request.Method.GET, village_info_URL,null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+
+                try {
+                    village_info_json = response.getJSONObject(0);
+                    //Log.d("MainActivity" , village_info_json.toString())
+                    Log.d("MainActivity" , village_info_json.toString());
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                TextView textView = findViewById(R.id.infotextview);
+                spinner.setAdapter(adapter);
+                spinner.setOnItemSelectedListener(new SpinnerActivity(getApplicationContext(),textView , village_info_json));
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("SpinnerActivity" , "Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(),"Error fetching data" , Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(villageInfoReq);
+
+
+
 
     }
 

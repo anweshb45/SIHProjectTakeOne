@@ -29,10 +29,12 @@
     <string name="woman_population">Woman Population: 1872</string>
     <string name="employment">Employment: 22%</string>
     <string name="child_population">Child Population: 988</string>
+    <string name="info_figure">Info figure</string>
+    <string name="literacy">Literacy:</string>
 
     <string-array name="Info_array">
         <item id="literacy">Literacy</item>
-        <item id="women_literacy">Women Literacy<item>
+        <item id="women_literacy">Women Literacy</item>
         <item id="sex_ratio">Sex Ratio</item>
         <item id="population">Population</item>
         <item id="employment">Employment</item>

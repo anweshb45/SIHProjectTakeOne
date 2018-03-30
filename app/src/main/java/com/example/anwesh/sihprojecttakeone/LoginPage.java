@@ -139,34 +139,6 @@ public class LoginPage extends AppCompatActivity {
                     }
                 };
 
-                /*StringRequest loginReq = new StringRequest(Request.Method.POST, loginURL, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("LoginPage", response.toString());
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("LoginPage" , "Error: " + error.getMessage());
-                        Toast.makeText(getApplicationContext(),"Error logging in" , Toast.LENGTH_SHORT).show();
-                    }
-                }) {
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String,String> params = new HashMap<String, String>();
-                        params.put("username",username);
-                        params.put("password",password);
-
-                        return params;
-                    }
-
-                    @Override
-                    public Map<String, String> getHeaders() throws AuthFailureError {
-                        HashMap<String, String> headers = new HashMap<String, String>();
-                        headers.put("Content-Type", "application/json; charset=utf-8");
-                        return headers;
-                    }
-                };*/
                 queue.add(loginReq);
 
             }
