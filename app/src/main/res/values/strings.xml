@@ -39,8 +39,8 @@
         <item id="population">Population</item>
         <item id="employment">Employment</item>
         <item id="child_population">Child Population</item>
-        <item id ="no_school" >Number of Schools</item>
-        <item id = "no_fair_price_shop">Number of Fair Price Shops</item>
+        <item id="no_school">Number of Schools</item>
+        <item id="no_fair_price_shop">Number of Fair Price Shops</item>
         <item id="no_girl_primary">Number of Primary Girls</item>
         <item id="no_pregnant">Number of Pregnant Ladies</item>
         <item id="no_special_disease">Number of Special Diseases</item>
@@ -60,5 +60,14 @@
         <item id="no_job_cards">Number of job card holders</item>
         <item id="no_female_job_card">Number of female with job cards </item>
     </string-array>
+    <string name="title_activity_finance">Finance</string>
+    <string name="panchayat_finances">Panchayat Finances</string>
+    <string name="enter_year">Enter Year</string>
+    <string name="enter_year_label">Enter Year :</string>
+    <string name="central_allocation">Central Allocation</string>
+    <string name="state_allocation">State Allocation</string>
+    <string name="specific_scheme_allocation">Specific Scheme Allocation</string>
+    <string name="misc_grant">Miscellaneous grant</string>
+    <string name="show_fund_allocation">Show Fund Allocation</string>
 
 </resources>

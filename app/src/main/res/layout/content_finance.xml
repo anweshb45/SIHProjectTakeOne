@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.anwesh.sihprojecttakeone.Finance"
+    tools:showIn="@layout/app_bar_finance"
+    android:background="@color/defaultBackground">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:text="@string/panchayat_finances"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:padding = "8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="87dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:labelFor="@+id/year_inp"
+                    android:text="@string/enter_year_label"
+                    android:textColor="@color/login_page_text"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/year_inp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:ems="10"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:inputType="textPersonName"
+                    android:hint = "@string/enter_year"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:onClick="getAllocations"
+                android:padding="8dp"
+                android:text="@string/show_fund_allocation"
+                android:textAlignment="center"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/defaultBackground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:padding= "8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/central_allocation"
+                android:textStyle="bold"
+                android:textColor="@color/login_page_text"/>
+
+            <TextView
+                android:id="@+id/central_allocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:text="Central Allocation"
+                android:textColor="@color/login_page_text"
+                android:textSize="15dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/defaultBackground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:padding= "8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/state_allocation"
+                android:textStyle="bold"
+                android:textColor="@color/login_page_text"/>
+
+            <TextView
+                android:id="@+id/state_allocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:text="State Allocation"
+                android:textColor="@color/login_page_text"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/defaultBackground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:text="@string/specific_scheme_allocation"
+                android:textColor="@color/login_page_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scheme_allocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:text="Specific scheme Allocation"
+                android:textColor="@color/login_page_text"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/defaultBackground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:text="@string/misc_grant"
+                android:textColor="@color/login_page_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/misc_grant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:text="Misccellaneous grant"
+                android:textColor="@color/login_page_text"
+                android:textSize="15dp" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
